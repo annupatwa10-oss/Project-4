@@ -31,6 +31,7 @@ nav {
 
 .logo {
   width: 140px;
+  height: auto;
 }
 
 .menu, .nav-right {
@@ -101,11 +102,12 @@ nav {
   font-size: 16px;
   cursor: pointer;
   font-weight: bold;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
 .secondary-btn:hover {
   transform: translateY(-2px);
+  background-color: #e6be2e;
 }
 
 /* Version Block */
@@ -121,6 +123,7 @@ nav {
   width: 50px;
   height: 50px;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .version-text {
@@ -140,6 +143,10 @@ nav {
 .version-text a {
   color: #3182ce;
   text-decoration: none;
+}
+
+.version-text a:hover {
+  text-decoration: underline;
 }
 
 /* Grid Layout for Download Cards */
@@ -175,7 +182,7 @@ nav {
 .card p {
   color: #718096;
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .download-btn {
@@ -199,10 +206,12 @@ nav {
   font-size: 11px;
   margin-top: 15px;
   color: #a0aec0;
+  font-weight: bold;
 }
 
 .hash-code {
   font-size: 10px;
   color: #718096;
   word-break: break-all;
+  margin-bottom: 0 !important;
 }
