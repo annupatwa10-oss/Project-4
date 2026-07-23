@@ -9,7 +9,12 @@
 body {
   background-color: #f8f9fa;
   color: #333;
+  line-height: 1.5;
 }
+
+/* =========================================
+   DESKTOP & GENERAL STYLES (PC First)
+   ========================================= */
 
 /* Navbar Section */
 .box {
@@ -155,7 +160,7 @@ nav {
   margin: 40px auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
 }
 
@@ -214,4 +219,77 @@ nav {
   color: #718096;
   word-break: break-all;
   margin-bottom: 0 !important;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE STYLES (Phones & Tablets)
+   ========================================= */
+
+@media (max-width: 768px) {
+  /* Box container full width */
+  .box {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  /* Vertical Navbar stack for small screens */
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .menu, .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  .menu a, .nav-right a {
+    font-size: 14px;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    margin: 30px auto 20px auto;
+    padding: 0 15px;
+  }
+
+  .hero-title {
+    font-size: 26px; /* Font size scaling for phone screens */
+    flex-wrap: wrap;
+  }
+
+  .hero-title img {
+    width: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .secondary-btn {
+    width: 100%; /* Full-width button on mobile */
+    max-width: 320px;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .version-info {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  /* Single column grid on smaller mobile screens */
+  .container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px;
+  }
 }
